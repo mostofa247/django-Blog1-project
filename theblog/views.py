@@ -12,6 +12,8 @@ def home(request):
 class HomeView(ListView):
     model = Post
     template_name = 'home.html'
+    ordering = ['-post_date']
+    #ordering = ['-id']
 
 class A_DetailView(DetailView):
     model = Post
